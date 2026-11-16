@@ -1,0 +1,9 @@
+[phases.setup]
+nixPkgs = ["php82", "php82Packages.composer", "sqlite"]
+
+[phases.install]
+cmds = ["composer install --no-dev --prefer-dist --no-interaction --optimize-autoloader"]
+
+[start]
+cmd = "bash scripts/cloud-start.sh"
+
